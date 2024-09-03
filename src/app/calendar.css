@@ -1,0 +1,97 @@
+/* From Uiverse.io by Jedi-hongbin */ 
+.btn1 {
+    display: flex;
+    height: 2.5em;
+    width: 90px;
+    align-items: center;
+    justify-content: center;
+    background-color: #d9d9d94b;
+    border-radius: 15px 0px 0px 15px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .btn1 > svg {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: all 0.4s;
+  }
+  
+  .btn1.before-today:active > svg {
+    font-size: 1.5em;
+    transform: rotate(180deg) translateX(-15px);
+  }
+  
+  .btn1.after-today:active > svg {
+    font-size: 1.5em;
+    transform: translateX(-15px);
+  }
+  
+  /* .btn1:active {
+    box-shadow: 9px 9px 33px #6B4EFF, -9px -9px 33px #6B4EFF;
+    transform: translateY(-2px);
+  } */
+  
+  /* For ease-out */
+  .btn1.before-today > svg {
+    transition: all 0.4s ease-in-out;
+  }
+  
+  /* For ease-in */
+  .btn1.after-today > svg {
+    transition: all 0.4s ease-in;
+  }
+  
+  
+  
+  /* calendar.css */
+  
+  .slide-left-enter, .slide-right-enter {
+      position: relative;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+    
+    .slide-left-enter-active, .slide-right-enter-active {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+    
+    .slide-left-exit, .slide-right-exit {
+      position: relative;
+      opacity: 1;
+      transform: translateX(0%);
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+    
+    .slide-left-exit-active {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    
+    .slide-right-exit-active {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    
+    .event-day {
+      position: relative;
+    }
+    
+    .event-day::after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 6px;
+      height: 6px;
+      background-color: #6B4EFF;
+      border-radius: 50%;
+    }
+    
